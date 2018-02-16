@@ -17,3 +17,24 @@
 # Exercises II 
 
 * a) 
+```
+findMaxDiff = (n) => {
+    maxVal = n[0];
+    minVal = n[0];
+    for (i = 0; i < n.length; i++) {
+        if (n[i] < minVal) minVal = n[i];
+        if (n[i] > maxVal) maxVal = n[i];
+    }
+    return maxVal - minVal;
+}
+```
+
+* b) I may be oversimplifying, but there are two approaches I can think of. Being that eggs are fragile by nature, logic would seem to dictate that the most efficient test method would be to simply move from the bottom floor up, as I would assume with a 100 story building an egg would not survive a fall from even the 50th. In this case however, where we're throwing that logic out the window, I would think the most efficient way to figure it out across a variety of buildings would be to start at the middle floor, and and then continue subdividing from the midpoint of the split. Example with a 100-story building:
+``` 
+function test (floor = 50) = {
+    if (dropped from (floor) = break) {
+        test (floor / 2)
+    }
+}
+```
+* This would be less efficient if you knew that your sample size consisted of all buildings less than 10 stories, but I would think it would be more so if you had no idea of the variables at play.
